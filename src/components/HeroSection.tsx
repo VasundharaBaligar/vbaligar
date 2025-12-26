@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
@@ -29,6 +30,22 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
+        {/* Profile Photo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mb-8"
+        >
+          <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-soft-lg">
+            <img
+              src={profilePhoto}
+              alt="Vasundhara Vishwanath Baligar"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -52,20 +69,64 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-sans font-light leading-relaxed"
+          className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 font-sans font-light leading-relaxed"
         >
           Master's Student in Computer Science at{" "}
-          <span className="text-slate-text font-medium">UMass Amherst</span>
-          <br className="hidden md:block" />
-          Specializing in{" "}
+          <span className="text-slate-text font-medium">UMass Amherst</span>, specializing in{" "}
           <span className="text-primary font-medium">3D Computer Vision</span> &{" "}
-          <span className="text-primary font-medium">Machine Learning</span> Research
+          <span className="text-primary font-medium">Machine Learning</span> Research.
         </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-8 font-sans font-light leading-relaxed"
+        >
+          Previously, I worked as a Visiting Researcher at{" "}
+          <span className="text-slate-text font-medium">University of Wyoming</span>. Before that, I interned at{" "}
+          <span className="text-slate-text font-medium">IISc</span> and{" "}
+          <span className="text-slate-text font-medium">IIT Delhi</span> where I worked on 3D Graphics.
+        </motion.p>
+
+        {/* Social Links */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex items-center justify-center gap-6 mb-10"
+        >
+          <a
+            href="https://github.com/VasundharaBaligar"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans text-sm"
+          >
+            <Github className="w-5 h-5" />
+            <span className="hidden sm:inline">GitHub</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/vasundhara-v-baligar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans text-sm"
+          >
+            <Linkedin className="w-5 h-5" />
+            <span className="hidden sm:inline">LinkedIn</span>
+          </a>
+          <a
+            href="mailto:vbaligar@umass.edu"
+            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans text-sm"
+          >
+            <Mail className="w-5 h-5" />
+            <span className="hidden sm:inline">Email</span>
+          </a>
+        </motion.div>
 
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
           whileHover={{ scale: 1.05, boxShadow: "0 10px 40px -4px rgba(180, 120, 130, 0.3)" }}
           whileTap={{ scale: 0.98 }}
           onClick={scrollToProjects}

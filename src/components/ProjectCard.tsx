@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -8,8 +7,6 @@ interface ProjectCardProps {
   techStack: string[];
   image: string;
   index: number;
-  arxivLink?: string;
-  githubLink?: string;
 }
 
 const ProjectCard = ({
@@ -19,8 +16,6 @@ const ProjectCard = ({
   techStack,
   image,
   index,
-  arxivLink,
-  githubLink,
 }: ProjectCardProps) => {
   const isEven = index % 2 === 0;
 
@@ -47,14 +42,6 @@ const ProjectCard = ({
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
 
-          {/* Hover Overlay */}
-          <motion.div
-            className="absolute inset-0 bg-charcoal/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          >
-            <span className="text-primary-foreground font-sans text-sm tracking-wide px-4 py-2 rounded-full bg-primary/80 backdrop-blur-sm">
-              View Details
-            </span>
-          </motion.div>
         </div>
 
         {/* Decorative gradient blob */}
@@ -96,32 +83,6 @@ const ProjectCard = ({
               {tech}
             </span>
           ))}
-        </div>
-
-        {/* Links */}
-        <div className="flex gap-4 pt-2">
-          {arxivLink && (
-            <a
-              href={arxivLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 font-sans font-medium transition-colors"
-            >
-              <ExternalLink className="w-4 h-4" />
-              arXiv
-            </a>
-          )}
-          {githubLink && (
-            <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 font-sans font-medium transition-colors"
-            >
-              <Github className="w-4 h-4" />
-              GitHub
-            </a>
-          )}
         </div>
       </motion.div>
     </motion.article>
