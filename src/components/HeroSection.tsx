@@ -42,10 +42,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-charcoal leading-tight mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-semibold text-charcoal leading-tight mb-6"
         >
           Namaste, I'm{" "}
-          <span className="text-gradient">Vasundhara Vishwanath Baligar.</span>
+          <span className="text-gradient whitespace-nowrap">Vasundhara Vishwanath Baligar.</span>
         </motion.h1>
 
         <motion.p
