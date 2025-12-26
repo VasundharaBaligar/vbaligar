@@ -37,11 +37,11 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-8"
         >
-          <div className="w-40 h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-soft-lg">
+          <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-soft-lg">
             <img
               src={profilePhoto}
               alt="Vasundhara Vishwanath Baligar"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover scale-125"
             />
           </div>
         </motion.div>
