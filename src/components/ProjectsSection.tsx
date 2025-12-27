@@ -4,6 +4,10 @@ import facialMotionImage from "@/assets/project-facial-motion.jpg";
 import holeFillingImage from "@/assets/project-hole-filling.png";
 import textureInputImage from "@/assets/project-texture-input.png";
 import textureOutputImage from "@/assets/project-texture-output.png";
+import iiscSetupImage from "@/assets/project-iisc-setup.png";
+import iiscOutputImage from "@/assets/project-iisc-output.png";
+import 'katex/dist/katex.min.css';
+import { InlineMath } from 'react-katex';
 
 const projects = [
   {
@@ -31,6 +35,19 @@ const projects = [
     techStack: ["PyTorch", "Open3D", "CUDA"],
     image: textureInputImage,
     imageAlt: textureOutputImage,
+    fitImage: true,
+  },
+  {
+    title: "Demand Response & Anomaly Detection",
+    venue: "IISc Research Project",
+    description: (
+      <>
+        This research developed a home energy management system integrating Demand Response with Non-Intrusive Load Monitoring (NILM) to optimize electricity usage. A Cumulative Sum (CUSUM) algorithm was implemented to detect abnormal energy patterns by tracking deviations from average consumption, utilizing the recursive equation <InlineMath math="S(t) = S(t-1) + [E(t) - E_{av}]" />. Validated on the real-world REDD dataset, the system successfully identified high-power anomalies and enabled load scheduling to mitigate grid stress during peak hours.
+      </>
+    ),
+    techStack: ["Python", "NILM", "Signal Processing", "Data Analysis"],
+    image: iiscSetupImage,
+    imageAlt: iiscOutputImage,
     fitImage: true,
   },
 ];
