@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 interface ProjectCardProps {
   title: string;
@@ -6,6 +7,7 @@ interface ProjectCardProps {
   description: string;
   techStack: string[];
   image: string;
+  imageAlt?: string;
   index: number;
 }
 
@@ -15,9 +17,13 @@ const ProjectCard = ({
   description,
   techStack,
   image,
+  imageAlt,
   index,
 }: ProjectCardProps) => {
   const isEven = index % 2 === 0;
+  const [showAltImage, setShowAltImage] = useState(false);
+  const hasAltImage = !!imageAlt;
+  const currentImage = showAltImage && imageAlt ? imageAlt : image;
 
   return (
     <motion.article
@@ -35,13 +41,20 @@ const ProjectCard = ({
         transition={{ duration: 0.6, delay: 0.2 }}
         className={`relative ${!isEven ? "lg:order-2" : ""}`}
       >
-        <div className="relative aspect-video rounded-2xl overflow-hidden bg-card-gradient border border-border shadow-soft-lg group">
+        <div 
+          className={`relative aspect-video rounded-2xl overflow-hidden bg-card-gradient border border-border shadow-soft-lg group ${hasAltImage ? "cursor-pointer" : ""}`}
+          onClick={() => hasAltImage && setShowAltImage(!showAltImage)}
+        >
           <img
-            src={image}
+            src={currentImage}
             alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
           />
-
+          {hasAltImage && (
+            <div className="absolute bottom-3 right-3 px-3 py-1.5 bg-background/80 backdrop-blur-sm rounded-full text-xs font-sans text-muted-foreground border border-border">
+              Click to {showAltImage ? "see input" : "see output"}
+            </div>
+          )}
         </div>
 
         {/* Decorative gradient blob */}
