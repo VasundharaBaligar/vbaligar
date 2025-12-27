@@ -19,17 +19,19 @@ const projects = [
     venue: "3D Deep Learning Research",
     description:
       "This project focused on building a smart AI model designed to fix broken or incomplete 3D scans. Using a specialized deep learning architecture (combining PointNet and ResNet), the system analyzes 3D objects with missing parts and automatically learns how to fill in the holes to restore the original shape. Trained on a massive dataset of over 51,000 3D objects, the model successfully reconstructed shapes with over 90% accuracy, demonstrating that it could reliably fix complex, missing data.",
-    techStack: ["PyTorch3D", "PointNet", "ResNet", "ShapeNet", "CUDA"],
+    techStack: ["PyTorch 3D", "Docker", "NVIDIA DGX", "MeshLab"],
     image: holeFillingImage,
+    fitImage: true,
   },
   {
     title: "Surface Texture Mapping",
     venue: "IIT Delhi Research Project",
     description:
       "Research conducted at IIT Delhi focused on implementing a neural mesh transfer pipeline to project realistic textures across incomplete 3D brain surfaces. By utilizing progressive positional encoding, the system preserved high-frequency geometric details critical for accurate visualization. The project also involved reconstructing partial brain meshes by identifying and aligning anatomical keypoints between source and target surfaces, which enabled realistic cortical deformation and precise structural alignment.",
-    techStack: ["PyTorch", "Open3D", "Neural Networks", "Mesh Processing"],
+    techStack: ["PyTorch", "Open3D", "CUDA"],
     image: textureInputImage,
     imageAlt: textureOutputImage,
+    fitImage: true,
   },
 ];
 

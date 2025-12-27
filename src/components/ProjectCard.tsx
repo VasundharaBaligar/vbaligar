@@ -8,6 +8,7 @@ interface ProjectCardProps {
   techStack: string[];
   image: string;
   imageAlt?: string;
+  fitImage?: boolean;
   index: number;
 }
 
@@ -18,6 +19,7 @@ const ProjectCard = ({
   techStack,
   image,
   imageAlt,
+  fitImage = false,
   index,
 }: ProjectCardProps) => {
   const isEven = index % 2 === 0;
@@ -48,7 +50,7 @@ const ProjectCard = ({
           <img
             src={currentImage}
             alt={title}
-            className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+            className={`w-full h-full transition-all duration-500 group-hover:scale-105 ${fitImage ? "object-contain" : "object-cover"}`}
           />
           {hasAltImage && (
             <div className="absolute bottom-3 right-3 px-3 py-1.5 bg-background/80 backdrop-blur-sm rounded-full text-xs font-sans text-muted-foreground border border-border">
