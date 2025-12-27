@@ -4,7 +4,7 @@ import { useState } from "react";
 interface ProjectCardProps {
   title: string;
   venue?: string;
-  description: string;
+  description: string | React.ReactNode;
   techStack: string[];
   image: string;
   imageAlt?: string;
