@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,22 +11,11 @@ const Footer = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row items-center justify-between gap-4"
+          className="flex items-center justify-center"
         >
           <p className="text-muted-foreground font-sans text-sm">
             © {currentYear} Vasundhara Vishwanath Baligar. All rights reserved.
           </p>
-
-          <div className="flex items-center gap-1 text-muted-foreground font-sans text-sm">
-            Made with
-            <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity, repeatDelay: 2 }}
-            >
-              <Heart className="w-4 h-4 text-primary fill-primary mx-1" />
-            </motion.span>
-            for 3D Computer Vision
-          </div>
         </motion.div>
       </div>
     </footer>
