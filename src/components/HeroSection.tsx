@@ -64,15 +64,18 @@ const HeroSection = () => {
         >
           <p className="mb-4">
             Master's student in Computer Science at{" "}
-            <span className="text-slate-text font-medium">UMass Amherst</span>, specializing in{" "}
-            <span className="text-primary font-medium">3D Computer Vision</span> and{" "}
-            <span className="text-primary font-medium">Machine Learning</span>.
+            <span className="text-slate-text font-medium whitespace-nowrap">UMass Amherst</span>, specializing in{" "}
+            <span className="text-primary font-medium whitespace-nowrap">3D Computer Vision</span> and{" "}
+            <span className="text-primary font-medium whitespace-nowrap">Machine Learning</span>.
           </p>
           <p className="mb-4">
             Most recently, I was a Visiting Researcher at the{" "}
-            <span className="text-slate-text font-medium">University of Wyoming</span> working with Dr. Shivanand Sheshappanavar on 3D Visual Question Answering (VQA). Previously, I conducted research at{" "}
-            <span className="text-slate-text font-medium">IIT Delhi</span> on neural mesh transfer for brain surfaces under Prof. Subodh Kumar, and at{" "}
-            <span className="text-slate-text font-medium">IISc</span> on anomaly detection systems with Dr. Subba Reddy B.
+            <span className="text-slate-text font-medium whitespace-nowrap">University of Wyoming</span> working with{" "}
+            <span className="whitespace-nowrap">Dr. Shivanand Sheshappanavar</span> on 3D Visual Question Answering (VQA). Previously, I conducted research at{" "}
+            <span className="text-slate-text font-medium whitespace-nowrap">IIT Delhi</span> on neural mesh transfer for brain surfaces under{" "}
+            <span className="whitespace-nowrap">Prof. Subodh Kumar</span>, and at{" "}
+            <span className="text-slate-text font-medium whitespace-nowrap">IISc</span> on anomaly detection systems with{" "}
+            <span className="whitespace-nowrap">Senior Scientist Dr. Subba Reddy B</span>.
           </p>
           <p>
             My work focuses on geometric deep learning tasks, including point cloud completion and surface reconstruction.
