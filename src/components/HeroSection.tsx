@@ -56,20 +56,28 @@ const HeroSection = () => {
           <span className="text-gradient whitespace-nowrap">Vasundhara Vishwanath Baligar.</span>
         </motion.h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-8 font-sans font-light leading-relaxed"
+          className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-8 font-sans font-light leading-relaxed text-justify"
         >
-          Master's student in Computer Science at{" "}
-          <span className="text-slate-text font-medium">UMass Amherst</span>, specializing in{" "}
-          <span className="text-primary font-medium">3D Computer Vision</span> and{" "}
-          <span className="text-primary font-medium">Machine Learning</span>. Most recently, I was a Visiting Researcher at the{" "}
-          <span className="text-slate-text font-medium">University of Wyoming</span> working with Dr. Shivanand Sheshappanavar on 3D Visual Question Answering (VQA). Previously, I conducted research at{" "}
-          <span className="text-slate-text font-medium">IIT Delhi</span> on neural mesh transfer for brain surfaces under Prof. Subodh Kumar, and at{" "}
-          <span className="text-slate-text font-medium">IISc</span> on anomaly detection systems with Dr. Subba Reddy B. My work focuses on geometric deep learning tasks, including point cloud completion and surface reconstruction.
-        </motion.p>
+          <p className="mb-4">
+            Master's student in Computer Science at{" "}
+            <span className="text-slate-text font-medium">UMass Amherst</span>, specializing in{" "}
+            <span className="text-primary font-medium">3D Computer Vision</span> and{" "}
+            <span className="text-primary font-medium">Machine Learning</span>.
+          </p>
+          <p className="mb-4">
+            Most recently, I was a Visiting Researcher at the{" "}
+            <span className="text-slate-text font-medium">University of Wyoming</span> working with Dr. Shivanand Sheshappanavar on 3D Visual Question Answering (VQA). Previously, I conducted research at{" "}
+            <span className="text-slate-text font-medium">IIT Delhi</span> on neural mesh transfer for brain surfaces under Prof. Subodh Kumar, and at{" "}
+            <span className="text-slate-text font-medium">IISc</span> on anomaly detection systems with Dr. Subba Reddy B.
+          </p>
+          <p>
+            My work focuses on geometric deep learning tasks, including point cloud completion and surface reconstruction.
+          </p>
+        </motion.div>
 
         {/* Social Links */}
         <motion.div
