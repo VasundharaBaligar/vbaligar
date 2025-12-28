@@ -62,7 +62,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-8 font-sans font-light leading-relaxed"
         >
-          I am a Master's student in Computer Science at{" "}
+          Master's student in Computer Science at{" "}
           <span className="text-slate-text font-medium">UMass Amherst</span>, specializing in{" "}
           <span className="text-primary font-medium">3D Computer Vision</span> and{" "}
           <span className="text-primary font-medium">Machine Learning</span>. Most recently, I was a Visiting Researcher at the{" "}
