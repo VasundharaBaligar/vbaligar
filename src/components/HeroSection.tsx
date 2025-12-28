@@ -56,31 +56,23 @@ const HeroSection = () => {
           <span className="text-gradient whitespace-nowrap">Vasundhara Vishwanath Baligar.</span>
         </motion.h1>
 
-        <motion.div
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-8 font-sans font-light leading-relaxed text-justify"
+          className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto mb-8 font-sans font-light leading-relaxed text-justify"
         >
-          <p className="mb-4">
-            Master's student in Computer Science at{" "}
-            <span className="text-slate-text font-medium whitespace-nowrap">UMass Amherst</span>, specializing in{" "}
-            <span className="text-primary font-medium whitespace-nowrap">3D Computer Vision</span> and{" "}
-            <span className="text-primary font-medium whitespace-nowrap">Machine Learning</span>.
-          </p>
-          <p className="mb-4">
-            Most recently, I was a Visiting Researcher at the{" "}
-            <span className="text-slate-text font-medium whitespace-nowrap">University of Wyoming</span> working with{" "}
-            <span className="whitespace-nowrap">Dr. Shivanand Sheshappanavar</span> on 3D Visual Question Answering (VQA). Previously, I conducted research at{" "}
-            <span className="text-slate-text font-medium whitespace-nowrap">IIT Delhi</span> on neural mesh transfer for brain surfaces under{" "}
-            <span className="whitespace-nowrap">Prof. Subodh Kumar</span>, and at{" "}
-            <span className="text-slate-text font-medium whitespace-nowrap">IISc</span> on anomaly detection systems with{" "}
-            <span className="whitespace-nowrap">Senior Scientist Dr. Subba Reddy B</span>.
-          </p>
-          <p>
-            My work focuses on geometric deep learning tasks, including point cloud completion and surface reconstruction.
-          </p>
-        </motion.div>
+          Master's student in Computer Science at{" "}
+          <span className="text-slate-text font-medium whitespace-nowrap">UMass Amherst</span>, specializing in{" "}
+          <span className="text-primary font-medium whitespace-nowrap">3D Computer Vision</span> and{" "}
+          <span className="text-primary font-medium whitespace-nowrap">Machine Learning</span>. Most recently, I was a Visiting Researcher at the{" "}
+          <span className="text-slate-text font-medium whitespace-nowrap">University of Wyoming</span> working with{" "}
+          <span className="whitespace-nowrap">Dr. Shivanand Sheshappanavar</span> on 3D Visual Question Answering (VQA). Previously, I conducted research at{" "}
+          <span className="text-slate-text font-medium whitespace-nowrap">IIT Delhi</span> on neural mesh transfer for brain surfaces under{" "}
+          <span className="whitespace-nowrap">Prof. Subodh Kumar</span>, and at{" "}
+          <span className="text-slate-text font-medium whitespace-nowrap">IISc</span> on anomaly detection systems with{" "}
+          <span className="whitespace-nowrap">Senior Scientist Dr. Subba Reddy B</span>. My work focuses on geometric deep learning tasks, including point cloud completion and surface reconstruction.
+        </motion.p>
 
         {/* Social Links */}
         <motion.div
