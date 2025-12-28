@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { ExternalLink } from "lucide-react";
+
+interface Publication {
+  title: string;
+  url: string;
+}
 
 interface ProjectCardProps {
   title: string;
@@ -9,6 +15,7 @@ interface ProjectCardProps {
   image: string;
   imageAlt?: string;
   fitImage?: boolean;
+  publications?: Publication[];
   index: number;
 }
 
@@ -20,6 +27,7 @@ const ProjectCard = ({
   image,
   imageAlt,
   fitImage = false,
+  publications,
   index,
 }: ProjectCardProps) => {
   const isEven = index % 2 === 0;
@@ -99,6 +107,24 @@ const ProjectCard = ({
             </span>
           ))}
         </div>
+
+        {/* Publications */}
+        {publications && publications.length > 0 && (
+          <div className="flex flex-wrap gap-3 pt-2">
+            {publications.map((pub, i) => (
+              <a
+                key={i}
+                href={pub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-primary hover:text-primary/80 font-sans text-sm font-medium transition-colors"
+              >
+                <ExternalLink className="w-4 h-4" />
+                {pub.title}
+              </a>
+            ))}
+          </div>
+        )}
       </motion.div>
     </motion.article>
   );

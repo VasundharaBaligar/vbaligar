@@ -49,6 +49,10 @@ const projects = [
     image: iiscSetupImage,
     imageAlt: iiscOutputImage,
     fitImage: true,
+    publications: [
+      { title: "IEEE Publication 1", url: "https://ieeexplore.ieee.org/document/10876265" },
+      { title: "IEEE Publication 2", url: "https://ieeexplore.ieee.org/document/10961548" },
+    ],
   },
 ];
 
