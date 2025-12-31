@@ -135,7 +135,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 40px -4px rgba(180, 120, 130, 0.3)" }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-muted text-muted-foreground font-sans font-medium text-base shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:text-charcoal"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-sans font-medium text-base shadow-soft hover:shadow-soft-lg transition-all duration-300"
           >
             View Resume
             <FileText className="w-4 h-4" />
