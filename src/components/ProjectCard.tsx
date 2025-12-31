@@ -8,6 +8,7 @@ interface Publication {
 }
 
 interface ProjectCardProps {
+  id?: string;
   title: string;
   venue?: string;
   description: string | React.ReactNode;
@@ -20,6 +21,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({
+  id,
   title,
   venue,
   description,
@@ -37,6 +39,7 @@ const ProjectCard = ({
 
   return (
     <motion.article
+      id={id}
       initial={{ opacity: 0, y: 60 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}

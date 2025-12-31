@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Github, Linkedin, Mail, FileText } from "lucide-react";
+import { ChevronDown, Github, Linkedin, Mail, FileText, BookOpen } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const HeroSection = () => {
   const scrollToProjects = () => {
     const projectsSection = document.getElementById("projects");
     projectsSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToPublications = () => {
+    const iiscSection = document.getElementById("iisc-project");
+    iiscSection?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -60,18 +65,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto mb-8 font-sans font-light leading-relaxed text-justify"
+          className="text-base md:text-lg text-muted-foreground max-w-4xl mx-auto mb-8 font-sans font-light leading-relaxed text-justify px-2"
         >
-          Master's student in Computer Science at{" "}
-          <span className="text-slate-text font-medium whitespace-nowrap">UMass Amherst</span>, specializing in{" "}
-          <span className="text-primary font-medium whitespace-nowrap">3D Computer Vision</span> and{" "}
-          <span className="text-primary font-medium whitespace-nowrap">Machine Learning</span>. Most recently, I was a Visiting Researcher at the{" "}
-          <span className="text-slate-text font-medium whitespace-nowrap">University of Wyoming</span> working with{" "}
-          <span className="whitespace-nowrap">Dr. Shivanand Sheshappanavar</span> on 3D Visual Question Answering (VQA). Previously, I conducted research at{" "}
-          <span className="text-slate-text font-medium whitespace-nowrap">IIT Delhi</span> on neural mesh transfer for brain surfaces under{" "}
-          <span className="whitespace-nowrap">Prof. Subodh Kumar</span>, and at{" "}
-          <span className="text-slate-text font-medium whitespace-nowrap">IISc</span> on anomaly detection systems with{" "}
-          <span className="whitespace-nowrap">Senior Scientist Dr. Subba Reddy B</span>. My work focuses on geometric deep learning tasks, including point cloud completion and surface reconstruction.
+          Master's student in Computer Science at <span className="text-slate-text font-medium whitespace-nowrap">UMass Amherst</span>, specializing in <span className="text-primary font-medium whitespace-nowrap">3D Computer Vision</span> and <span className="text-primary font-medium whitespace-nowrap">Machine Learning</span>. Most recently, I was a Visiting Researcher at the <span className="text-slate-text font-medium whitespace-nowrap">University of Wyoming</span> working with <span className="whitespace-nowrap">Dr. Shivanand Sheshappanavar</span> on 3D Visual Question Answering (VQA). Previously, I conducted research at <span className="text-slate-text font-medium whitespace-nowrap">IIT Delhi</span> on neural mesh transfer for brain surfaces under <span className="whitespace-nowrap">Prof. Subodh Kumar</span>, and at <span className="text-slate-text font-medium whitespace-nowrap">IISc</span> on anomaly detection systems with <span className="whitespace-nowrap">Senior Scientist Dr. Subba Reddy B</span>. My work focuses on geometric deep learning tasks, including point cloud completion and surface reconstruction.
         </motion.p>
 
         {/* Social Links */}
@@ -91,15 +87,6 @@ const HeroSection = () => {
             <span className="hidden sm:inline">GitHub</span>
           </a>
           <a
-            href="/Resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors font-sans text-sm"
-          >
-            <FileText className="w-5 h-5" />
-            <span className="hidden sm:inline">Resume</span>
-          </a>
-          <a
             href="https://www.linkedin.com/in/vasundhara-v-baligar/"
             target="_blank"
             rel="noopener noreferrer"
@@ -117,18 +104,43 @@ const HeroSection = () => {
           </a>
         </motion.div>
 
-        <motion.button
+        {/* Action Buttons */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          whileHover={{ scale: 1.05, boxShadow: "0 10px 40px -4px rgba(180, 120, 130, 0.3)" }}
-          whileTap={{ scale: 0.98 }}
-          onClick={scrollToProjects}
-          className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-sans font-medium text-base shadow-soft hover:shadow-soft-lg transition-all duration-300"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          View Research
-          <ChevronDown className="w-4 h-4" />
-        </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 40px -4px rgba(180, 120, 130, 0.3)" }}
+            whileTap={{ scale: 0.98 }}
+            onClick={scrollToProjects}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-sans font-medium text-base shadow-soft hover:shadow-soft-lg transition-all duration-300"
+          >
+            View Research
+            <ChevronDown className="w-4 h-4" />
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 40px -4px rgba(180, 120, 130, 0.3)" }}
+            whileTap={{ scale: 0.98 }}
+            onClick={scrollToPublications}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-accent-foreground font-sans font-medium text-base shadow-soft hover:shadow-soft-lg transition-all duration-300"
+          >
+            Publications
+            <BookOpen className="w-4 h-4" />
+          </motion.button>
+          <motion.a
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 40px -4px rgba(180, 120, 130, 0.3)" }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-muted text-muted-foreground font-sans font-medium text-base shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:text-charcoal"
+          >
+            View Resume
+            <FileText className="w-4 h-4" />
+          </motion.a>
+        </motion.div>
       </div>
 
     </section>
