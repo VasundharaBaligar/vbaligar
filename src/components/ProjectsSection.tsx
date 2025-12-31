@@ -38,6 +38,7 @@ const projects = [
     fitImage: true,
   },
   {
+    id: "iisc-project",
     title: "Demand Response & Anomaly Detection",
     venue: "IISc Research Project",
     description: (
@@ -50,8 +51,8 @@ const projects = [
     imageAlt: iiscOutputImage,
     fitImage: true,
     publications: [
-      { title: "IEEE Publication 1", url: "https://ieeexplore.ieee.org/document/10876265" },
-      { title: "IEEE Publication 2", url: "https://ieeexplore.ieee.org/document/10961548" },
+      { title: "IEEE ISGT Asia", url: "https://ieeexplore.ieee.org/document/10876265" },
+      { title: "IEEE PEDES", url: "https://ieeexplore.ieee.org/document/10961548" },
     ],
   },
 ];
